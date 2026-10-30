@@ -1,0 +1,15 @@
+services:
+  challenge:
+    build: .
+    image: eclipsec/web-sqli-001:1.0
+    container_name: eclipsec-web-sqli-001
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    # Reasonable isolation — the challenge needs no extra privileges
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    tmpfs:
+      - /tmp

@@ -1,0 +1,16 @@
+id: web-sqli-001
+name: Login Bypass
+version: "1.0"
+
+category: web
+difficulty: easy
+points: 100
+
+author: EclipSec
+description: >-
+  A SecureCorp internal admin portal protects its login with a naive SQL query.
+  Analyze the form, find the injection point and authenticate as admin to reveal the flag.
+
+target:
+  type: http
+  port: 8080
